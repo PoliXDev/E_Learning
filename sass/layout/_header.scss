@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as mixins;
+
+header.header-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      
+      a {
+        display: block;
+      }
+      
+      nav {
+        ul {
+          @include mixins.reset-list;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+    
