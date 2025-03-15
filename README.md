@@ -1,2 +1,2 @@
 # E_Learning
- Landind Page Responsive
+ Landing Page Responsive
