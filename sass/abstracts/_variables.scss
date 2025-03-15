@@ -20,8 +20,8 @@ $color-magenta: #F02AA6;
 
 
 // gradients
-$gradient-pink-orange: linear-gradient(180deg, #F02AA6, #FF6F48);
-$gradient-blue-pink: linear-gradient(180deg, #4851FF, #000000);
+$gradient-pink-orange: linear-gradient(180deg, #F02AA6 0.04%, #FF6F48 100%);
+$gradient-blue-pink: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
 
 // fonts
 $font-size-small: 16px;

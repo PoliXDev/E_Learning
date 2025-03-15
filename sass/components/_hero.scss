@@ -1,0 +1,157 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.hero-section {
+  padding: 0 16px;
+  
+  @include mixins.breakpoint-up(tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0 40px;
+    margin: 40px 0;
+  }
+}
+
+.hero-container {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  @include mixins.breakpoint-up(tablet) {
+    flex: 1;
+    padding: 40px 0;
+    order: 2;
+    margin-right: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0;
+    
+    @include mixins.breakpoint-up(tablet) {
+      padding-left: 0;
+      padding-right: 20px;
+    }
+  }
+}
+
+.hero-title {
+  margin-bottom: 26px;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 40px;
+  color: vars.$color-black;
+  
+  @include mixins.breakpoint-up(tablet) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+.hero-description {
+  margin-bottom: 26px;
+  font-size: 18px;
+  line-height: 26px;
+  color: vars.$color-dark-gray;
+}
+
+.hero-button {
+  margin-top: auto;
+}
+
+.hero-img {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+  
+  @include mixins.breakpoint-up(tablet) {
+    flex: 1;
+    margin-top: -20px;
+    order: 1;
+    position: relative;
+  }
+}
+
+/* Estilos para la imagen móvil */
+.hero-img-mobile {
+  display: block;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  
+  @include mixins.breakpoint-up(tablet) {
+    display: none;
+  }
+}
+
+/* Estilos para la imagen tablet/desktop */
+.hero-img-tablet {
+  display: none;
+  width: 100%;
+  max-width: 800px;
+  margin: 0;
+  
+  @include mixins.breakpoint-up(tablet) {
+    display: block;
+    margin-left: 60px;
+    transform: translateY(-30px);
+  }
+  
+  @include mixins.breakpoint-up(desktop) {
+    margin-left: 70px;
+  }
+}
+
+.hero-numbers {
+  display: flex;
+  flex-direction: column;
+  background-color: vars.$color-white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  
+  .hero-number-title {
+    font-size: 14px;
+    color: vars.$color-dark-gray;
+    margin-bottom: 5px;
+  }
+  
+  .hero-number-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: vars.$color-black;
+  }
+}
+
+.hero-numbers1 {
+  top: 10%;
+  right: 15%;
+  
+  @media (max-width: 767px) {
+    top: 5%;
+    right: 10%;
+  }
+}
+
+.hero-numbers2 {
+  bottom: 10%;
+  left: 15%;
+  
+  @media (max-width: 767px) {
+    bottom: 5%;
+    left: 10%;
+  }
+}
+
+.container {
+  @include mixins.breakpoint-up(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}

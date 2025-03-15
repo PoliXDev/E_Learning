@@ -2,5 +2,16 @@
 @use "../abstracts/variables" as vars;
 
 .button {
-  @include mixins.button(vars.$color-black, vars.$color-white);
+  @include mixins.button-pink-orange;
 }
+
+.button.button-dark {
+  @include mixins.button-dark(vars.$color-black);
+  background: none !important;
+  background-color: vars.$color-black !important;
+}
+  
+.button.button-gradient {
+  @include mixins.button-blue-pink;
+}
+

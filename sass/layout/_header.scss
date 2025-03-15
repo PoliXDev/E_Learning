@@ -1,4 +1,5 @@
 @use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
 
 header.header-container {
   padding-top: 20px;
@@ -7,15 +8,30 @@ header.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
     
     .logo {
       display: flex;
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      margin-left: 0%;
+      
       
       a {
         display: block;
+        
+        img {
+          width: 120px;
+          
+          @include mixins.breakpoint-up(tablet) {
+            width: 150px;
+          }
+          
+          @include mixins.breakpoint-up(desktop) {
+            width: 180px;
+          }
+        }
       }
       
       nav {
@@ -23,6 +39,13 @@ header.header-container {
           @include mixins.reset-list;
           display: flex;
           align-items: center;
+          
+          
+          .button {
+            background-color: vars.$color-black;
+            background-image: none;
+            
+          }
         }
       }
     }
